@@ -11,10 +11,10 @@ html {
     font-family: Sen, sans-serif;
     background-color: rgb(230, 230, 230);
     color: #4b4b4b;
-    overflow-x: hidden;
 }
 body {
     font-size: 1rem;
+    overflow-x: hidden;
 }
 ul, ol {
     list-style: none;
@@ -66,7 +66,9 @@ ul, ol {
     align-items: center;
 }
 .header .profile {
-    display: block;
+    display: flex;
+    flex: 1;
+    min-width: 100px;
     max-width: 150px;
     border: 4px solid rgba(255, 255, 255, 0.8);
     border-radius: 50%;
@@ -89,6 +91,9 @@ ul, ol {
     .header .title {
         font-size: 3rem;
     }
+    .header .tags {
+        font-size: small;
+    }
     .navigation {
         margin-top: 7rem;
         align-self: stretch;
@@ -101,8 +106,20 @@ ul, ol {
         display: flex;
     }
 }
-
-@media (max-width: 620px) {
+@media (max-width: 600px) {
+    .header .title {
+        font-size: 2.5rem;
+    }
+}
+@media (max-width: 500px) {
+    .header .title-box {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .header .profile {
+        margin: 0;
+        margin-bottom: 3rem;
+    }
     .header .title {
         font-size: 2.5rem;
     }
