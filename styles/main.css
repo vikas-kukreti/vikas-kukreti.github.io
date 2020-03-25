@@ -9,8 +9,8 @@
 }
 html {
     font-family: Sen, sans-serif;
-    background-color: rgb(54, 54, 54);
-    color: #d8d8d8;
+    background-color: rgb(230, 230, 230);
+    color: #4b4b4b;
 }
 body {
     font-size: 1rem;
@@ -22,6 +22,8 @@ ul, ol {
 /* Header Styles */
 
 .header {
+    background-color: rgb(54, 54, 54);
+    color: #d8d8d8;
     display: flex;
     background-image: url(../images/header-bg.jpg);
     background-size: cover;
@@ -33,20 +35,22 @@ ul, ol {
     justify-content: center;
     flex: 1;
     flex-direction: column;
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(21, 26, 53, 0.4);
 }
 .navigation {
     display: flex;
     align-self: center;
     padding: 0 1rem;
     justify-content: center;
-    margin-top: 1rem;
+    margin-top: 4rem;
     background: rgba(0, 0, 0, 0.4);
+    border-radius: 4px;
 }
 .navigation a {
     display: inline-flex;
     align-items: center;
     padding: 1rem 2rem;
+    transition: 0.4s background ease-out;
 }
 .navigation a img {
     margin-right: 1rem;
@@ -67,6 +71,13 @@ ul, ol {
     border-radius: 50%;
     margin-right: 1rem;
 }
+.header .profile::after {
+    display: block;
+    content: "";
+    height: 100px;
+    width: 1px;
+    background-color: aliceblue;
+}
 .header .title {
     font-size: 4.5rem;
     font-weight: 100;
@@ -75,4 +86,60 @@ ul, ol {
     font-size: 1rem;
     font-weight: 100;
     margin-top: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .header .wrapper{
+        padding: 2rem;
+    }
+    .header .title {
+        font-size: 3rem;
+    }
+    .navigation {
+        margin-top: 7rem;
+        align-self: stretch;
+        padding: 1rem 0;
+    }
+    .navigation ul {
+        flex: 1;
+    }
+    .navigation a {
+        display: flex;
+    }
+}
+
+@media (max-width: 620px) {
+    .header .title {
+        font-size: 2.5rem;
+    }
+}
+
+/* Content Styles */
+
+.content {
+    padding: 5% 10%;
+    max-width: 1366px;
+    margin: auto;
+}
+.content article {
+    padding: 3rem 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+}
+.content h2 {
+    margin-bottom: 2rem;
+    font-size: 5rem;
+}
+.content h4 {
+    font-size: 1.85rem;
+    margin-bottom: 1rem;
+}
+.content p,
+.content ul,
+.content ol {
+    line-height: 2.25rem;
+    margin-bottom: 2.5rem;
+}
+.content ul li:before {
+    content: '>';
+    margin-right: 1rem;
 }

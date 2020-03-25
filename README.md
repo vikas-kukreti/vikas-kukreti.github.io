@@ -1,2 +1,2 @@
 # vikas-kukreti.github.io
-My personal website 😁✌
+My personal portfolio website 😁✌
