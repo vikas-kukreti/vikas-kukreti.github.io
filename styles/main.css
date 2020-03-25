@@ -91,9 +91,6 @@ ul, ol {
     .header .title {
         font-size: 3rem;
     }
-    .header .tags {
-        font-size: small;
-    }
     .navigation {
         margin-top: 7rem;
         align-self: stretch;
@@ -113,6 +110,7 @@ ul, ol {
 }
 @media (max-width: 500px) {
     .header .title-box {
+        text-align: center;
         flex-wrap: wrap;
         justify-content: center;
     }
