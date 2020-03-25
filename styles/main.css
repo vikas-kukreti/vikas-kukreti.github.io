@@ -32,7 +32,6 @@ ul, ol {
     background-size: cover;
     min-height: 100vh;
     background-position: top center;
-
 }
 .header .wrapper {
     display: flex;
@@ -90,7 +89,7 @@ ul, ol {
 
 @media (max-width: 768px) {
     .header .wrapper{
-        padding: 2rem;
+        padding: 3rem 2rem;
     }
     .header .title {
         font-size: 3rem;
@@ -112,7 +111,10 @@ ul, ol {
         font-size: 2.5rem;
     }
 }
-@media (max-width: 500px) {
+@media (max-width: 500px) { 
+    .header .wrapper{
+        padding: 2rem;
+    }   
     .header .title-box {
         text-align: center;
         flex-wrap: wrap;
