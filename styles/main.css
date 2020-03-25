@@ -6,11 +6,13 @@
     border: none;
     background: none;
     box-sizing: border-box;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0.0);
 }
 html {
     font-family: Sen, sans-serif;
     background-color: rgb(230, 230, 230);
     color: #4b4b4b;
+    scroll-behavior: smooth;
 }
 body {
     font-size: 1rem;
@@ -29,7 +31,8 @@ ul, ol {
     background-image: url(../images/header-bg.jpg);
     background-size: cover;
     min-height: 100vh;
-    background-position: center center;
+    background-position: top center;
+
 }
 .header .wrapper {
     display: flex;
@@ -38,6 +41,7 @@ ul, ol {
     flex-direction: column;
     background: rgba(21, 26, 53, 0.4);
 }
+
 .navigation {
     display: flex;
     align-self: center;
@@ -137,6 +141,7 @@ ul, ol {
 .content h2 {
     margin-bottom: 2rem;
     font-size: 5rem;
+    line-height: 5rem;
 }
 .content h4 {
     font-size: 1.85rem;
@@ -147,6 +152,9 @@ ul, ol {
 .content ol {
     line-height: 2.25rem;
     margin-bottom: 2.5rem;
+}
+.content p {
+    text-align: justify;
 }
 .content ul li:before {
     content: '>';
