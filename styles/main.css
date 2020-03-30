@@ -215,3 +215,12 @@ ul, ol {
     top: -16px;
     opacity: 1;
 }
+
+/* Footer Styles */
+
+footer {
+    padding: 3rem 8rem;
+    background-color: rgb(34, 34, 34);
+    text-align: center;
+    color: rgb(151, 151, 151);
+}
