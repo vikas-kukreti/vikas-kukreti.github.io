@@ -182,8 +182,8 @@ ul, ol {
     flex-direction: row;
 }
 .contact-item img {
-    height: 2rem;
-    width: 2rem;
+    height: 3rem;
+    width: 3rem;
     margin-right: 1rem;
 }
 .contact-item h3 {
@@ -193,7 +193,20 @@ ul, ol {
     padding: 0 1rem;
     align-items: center;
     border-radius: 4px;
+    font-weight: normal;
     transition: 0.4s all;
+}
+
+@media (max-width: 600px) {
+    .contact-item {
+        flex: 1;
+    }
+    .contact-item a {
+        flex: 1;
+    }
+    .contact-item h3 {
+        flex: 1;
+    }
 }
 
 /* Footer Styles */
