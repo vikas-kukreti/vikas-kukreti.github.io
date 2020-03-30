@@ -179,7 +179,7 @@ ul, ol {
     background-color: #fafaff;
     flex: 1;
     margin: 0.5rem;
-    min-width: 20rem;
+    min-width: 15rem;
     box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
     border-radius: 0.25rem;
     overflow: hidden;
