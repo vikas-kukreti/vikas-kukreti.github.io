@@ -231,14 +231,12 @@ ul, ol {
 }
 .project-item:hover .img {
     transform: scale(1.1) translateY(-1rem);
-    opacity: 0.8;
 
 }
 
 @media (min-width: 768px) {
-    .project-item p {
-        padding-top: 3rem;
-        font-size: 1.5rem;
+    .project-item {
+        min-width: 20rem;
     }
 }
 
