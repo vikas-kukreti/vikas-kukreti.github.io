@@ -173,47 +173,27 @@ ul, ol {
     flex-wrap: wrap;
 }
 .contact-item {
-    display: flex;
     margin-right: 1rem;
+    margin-bottom: 1rem;
+}
+.contact-item a {    
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
 }
 .contact-item img {
-    height: 1.5rem;
-    width: 1.5rem;
+    height: 2rem;
+    width: 2rem;
+    margin-right: 1rem;
 }
 .contact-item h3 {
-    margin-top: 16px;
     display: flex;
-    overflow: hidden;
-    height: 0px;
-    position: absolute;
     background-color: rgb(189, 189, 189);
     color: #313131;
     padding: 0 1rem;
     align-items: center;
     border-radius: 4px;
     transition: 0.4s all;
-}
-.contact-item h3:before {
-    content: '';
-    transition: 0.3s all;
-    display: block;
-    background-color: rgb(196, 196, 196);
-    height: 16px;
-    width: 16px;
-    position: relative;
-    align-self: flex-start;
-    opacity: 0;
-    top: 0;
-    clip-path: polygon(50% 0%, 100% 100%, 0 100%);
-}
-
-.contact-item:hover h3 {
-    overflow: unset;
-    height: 2rem;
-}
-.contact-item:hover h3:before {
-    top: -16px;
-    opacity: 1;
 }
 
 /* Footer Styles */
