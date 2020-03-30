@@ -10,7 +10,7 @@
 }
 html {
     font-family: Sen, sans-serif;
-    background-color: rgb(230, 230, 230);
+    background-color: rgb(241, 241, 241);
     color: #4b4b4b;
     scroll-behavior: smooth;
 }
@@ -166,6 +166,12 @@ ul, ol {
     margin-right: 1rem;
 }
 
+@media (max-width: 768px) {
+    .content {
+        padding: 1.5rem;
+    }
+}
+
 /* Projects Styles */
 
 #projects section {
@@ -257,14 +263,26 @@ ul, ol {
     margin-right: 1rem;
 }
 .contact-item h3 {
+    position: relative;
     display: flex;
-    background-color: rgb(189, 189, 189);
+    background-color: #fafaff;
     color: #313131;
     padding: 0 1rem;
     align-items: center;
     border-radius: 4px;
     font-weight: normal;
     transition: 0.4s all;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
+}
+.contact-item h3::before {
+    content: '';
+    display: block;
+    width: 1rem;
+    height: 2rem;
+    background-color: #fafaff;
+    position: absolute;
+    left: -0.8rem;
+    clip-path: polygon(0rem 1rem, 1rem 0rem, 1rem 2rem);
 }
 
 @media (max-width: 600px) {
