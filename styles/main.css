@@ -134,7 +134,7 @@ ol {
 /* Content Styles */
 
 .content {
-  padding: 5% 10%;
+  padding: 2% 5%;
   max-width: 1366px;
   margin: auto;
 }
@@ -144,8 +144,8 @@ ol {
 }
 .content h2 {
   margin-bottom: 2rem;
-  font-size: 4rem;
-  line-height: 4rem;
+  font-size: 3.2rem;
+  line-height: 3.2rem;
   font-weight: normal;
   color: rgb(66, 66, 66);
 }
@@ -201,13 +201,18 @@ ol {
   transition: transform 0.3s;
 }
 .project-item h3 {
-  margin-top: 0.75rem;
-  padding: 0.5rem 1rem 0 1rem;
-  font-size: 1.5rem;
+  padding: 1.25rem 1rem 0 1rem;
+  font-size: 1.25rem;
+  position: relative;
+  z-index: 1;
+  background-color: #fafaff;
 }
 .project-item a {
   display: flex;
   padding: 0.5rem 1rem 1rem 1rem;
+  position: relative;
+  z-index: 1;
+  background-color: #fafaff;
 }
 .project-item a img {
   margin-right: 0.5rem;
@@ -219,6 +224,7 @@ ol {
   position: absolute;
   padding: 1.5rem 1rem 0.5rem 1rem;
   font-size: 1rem;
+  background-color: #fafaff;
   background: linear-gradient(
     rgba(0, 0, 0, 0.8),
     rgba(0, 0, 0, 0.7),
@@ -253,8 +259,8 @@ ol {
   flex-wrap: wrap;
 }
 .contact-item {
-  margin-right: 1rem;
-  margin-bottom: 1rem;
+  margin-right: 0.75rem;
+  margin-bottom: 0.75rem;
   flex: 1;
 }
 .contact-item a {
@@ -277,6 +283,7 @@ ol {
   align-items: center;
   border-radius: 4px;
   font-weight: normal;
+  font-size: 1.05rem;
   transition: 0.4s all;
   box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
 }
