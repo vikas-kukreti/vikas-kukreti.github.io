@@ -237,7 +237,7 @@ ol {
   left: 0;
   right: 0;
   position: absolute;
-  padding: 1.5rem 1rem 0.5rem 1rem;
+  padding: 1.25rem 1rem 0.5rem 1rem;
   font-size: 1rem;
   background-color: #fafaff;
   background: linear-gradient(
@@ -258,7 +258,7 @@ ol {
   transform: translateY(0%);
 }
 .project-item:hover .img {
-  transform: scale(1.1) translateY(-0.5rem);
+  transform: scale(1.25) translateY(-0.5rem);
 }
 
 @media (min-width: 768px) {
