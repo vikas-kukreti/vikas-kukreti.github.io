@@ -233,26 +233,12 @@ ol {
   margin-right: 0.5rem;
 }
 .project-item p {
-  top: 0;
-  left: 0;
-  right: 0;
-  position: absolute;
-  padding: 1.25rem 1rem 0.5rem 1rem;
-  font-size: 1rem;
-  background-color: #fafaff;
-  background: linear-gradient(
-    rgba(0, 0, 0, 0.8),
-    rgba(0, 0, 0, 0.7),
-    rgba(0, 0, 0, 0.6),
-    rgba(0, 0, 0, 0)
-  );
-  text-shadow: 0 0 0.125rem rgba(0, 0, 0, 0.651);
-  transform: translateY(-110%);
-  color: #efefef;
-  padding-bottom: 4rem;
-  line-height: 1.75rem;
-  overflow: hidden;
-  transition: transform 0.3s;
+  padding: 0.5rem 1rem 1rem 1rem;
+  border-top: 1px dashed #ccc;
+  margin: 0;
+  color: inherit;
+  font-size: 0.9rem;
+  line-height: 1.5rem;
 }
 .project-item:hover p {
   transform: translateY(0%);
@@ -270,18 +256,6 @@ ol {
 @media (max-width: 600px) {
   .project-item:hover .img {
     transform: none;
-  }
-  .project-item p {
-    position: relative;
-    transform: translateY(0);
-    background: none;
-    padding: 0.5rem 1rem 1rem 1rem;
-    border-top: 1px dashed #ccc;
-    margin: 0;
-    color: inherit;
-    text-shadow: none;
-    font-size: 0.9rem;
-    line-height: 1.5rem;
   }
 }
 
