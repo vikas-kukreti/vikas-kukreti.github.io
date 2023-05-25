@@ -10,8 +10,8 @@
 }
 html {
   font-family: Sen, sans-serif;
-  background-color: rgb(241, 241, 241);
-  color: #4b4b4b;
+  background-color: rgb(34, 32, 38);
+  color: rgba(255, 255, 255, 0.9);
   scroll-behavior: smooth;
 }
 body {
@@ -25,7 +25,6 @@ ol {
 /* Header Styles */
 
 .header {
-  background-color: rgb(54, 54, 54);
   color: #d8d8d8;
   display: flex;
   background-image: url(../images/header-bg.jpg);
@@ -143,19 +142,19 @@ ol {
 }
 .content article {
   padding: 3rem 0;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 .content h2 {
   margin-bottom: 2rem;
   font-size: 3rem;
   line-height: 3.2rem;
   font-weight: normal;
-  color: rgb(66, 66, 66);
+  color: rgba(255, 255, 255, 0.95);
 }
 .content h4 {
   font-size: 1.5rem;
   margin-bottom: 1rem;
-  color: rgb(66, 66, 66);
+  color: rgba(255, 255, 255, 0.95);
 }
 .content p,
 .content ul,
@@ -199,26 +198,28 @@ ol {
 
 .project-item {
   position: relative;
-  background-color: #fafaff;
+  background-color: rgba(250, 250, 255, 0.95);
   flex: 1;
   margin: 1.5rem 0.5rem;
+  transition: box-shadow 0.2s;
   min-width: 17rem;
   max-width: 50%;
   box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
   border-radius: 0.25rem;
   overflow: hidden;
+  color: #1e1d30;
 }
 .project-item .img {
   display: block;
   width: 100%;
-  transition: transform 0.3s;
+  aspect-ratio: 2/1;
 }
 .project-item h3 {
   padding: 1.25rem 1rem 0 1rem;
   font-size: 1.25rem;
   position: relative;
   z-index: 1;
-  background-color: #fafaff;
+  background-color: rgba(223, 223, 255, 0.5);
 }
 .project-item a {
   display: flex;
@@ -226,7 +227,7 @@ ol {
   position: relative;
   align-items: center;
   z-index: 1;
-  background-color: #fafaff;
+  background-color: rgba(223, 223, 255, 0.5);
   color: #234499;
 }
 .project-item a img {
@@ -240,11 +241,10 @@ ol {
   font-size: 0.9rem;
   line-height: 1.5rem;
 }
-.project-item:hover p {
-  transform: translateY(0%);
-}
-.project-item:hover .img {
-  transform: scale(1.25) translateY(-0.5rem);
+
+.project-item:hover  {
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 .5rem 2.75rem rgba(255, 255, 255, 0.2);
 }
 
 @media (min-width: 768px) {
@@ -252,13 +252,6 @@ ol {
     min-width: 19rem;
   }
 }
-
-@media (max-width: 600px) {
-  .project-item:hover .img {
-    transform: none;
-  }
-}
-
 /* Conttact Styles */
 
 #contact section {
