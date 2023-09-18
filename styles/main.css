@@ -272,6 +272,9 @@ ol {
   height: 3rem;
   width: 3rem;
   margin-right: 1rem;
+  border: 1px solid;
+  border-radius: 50%;
+  background: #eee;
 }
 .contact-item h3 {
   position: relative;
