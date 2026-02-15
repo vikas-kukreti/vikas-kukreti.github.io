@@ -1,0 +1,482 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vikas Kukreti - Resume</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --primary-color: #2a6496;
+        --text-color: #333;
+        --light-text-color: #666;
+        --background-color: #fdfdfd;
+        --border-color: #e0e0e0;
+      }
+
+      body {
+        font-family: "Lato", sans-serif;
+        margin: 0;
+        color: var(--text-color);
+        line-height: 1.65;
+      }
+
+      .resume-container {
+        max-width: 820px;
+        margin: 0 auto;
+        padding: 2rem 2.5rem;
+      }
+
+      .header {
+        text-align: center;
+        border-bottom: 1px solid var(--border-color);
+        padding-bottom: 1.5rem;
+        margin-bottom: 2rem;
+      }
+
+      .header h1 {
+        font-size: 2.5rem;
+        margin: 0 0 0.25rem 0;
+        font-weight: 700;
+      }
+
+      .header .subtitle {
+        font-size: 1.1rem;
+        color: var(--primary-color);
+        margin: 0 0 1rem 0;
+        font-weight: 400;
+      }
+
+      section {
+        padding: 1rem 0;
+        /* Adjusted padding for sections within columns */
+      }
+
+      .icon {
+        width: 1rem;
+        height: 1rem;
+      }
+
+      section:last-of-type {
+        border-bottom: none;
+        padding-bottom: 0;
+      }
+
+      /* Remove section borders within columns */
+      #left-column section,
+      #right-column section {
+        border-bottom: none;
+      }
+
+      #left-column section:last-of-type,
+      #right-column section:last-of-type {
+        padding-bottom: 0;
+      }
+
+      h2 {
+        font-size: 1.4rem;
+        color: var(--primary-color);
+        margin: 0 0 1.5rem 0;
+        padding-bottom: 0.25rem;
+        border-bottom: 2px solid var(--primary-color);
+        display: inline-block;
+      }
+
+      .connect-links {
+        margin: 0;
+        list-style: none;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+      }
+
+      .connect-links li {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .connect-links li a {
+        /* text-decoration: none; */
+        color: var(--text-color);
+      }
+
+      .connect-links li i.colored {
+        font-size: 1rem;
+      }
+
+      .job {
+        margin-bottom: 1.5rem;
+      }
+
+      .job:last-of-type {
+        margin-bottom: 0;
+      }
+
+      h3 {
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin: 0;
+        color: var(--text-color);
+      }
+
+      .job > p {
+        margin: 0;
+        font-size: 1.05rem;
+        color: var(--light-text-color);
+      }
+
+      .job > p > strong {
+        color: #444;
+        /* Slightly darker than light-text, but not as dark as company */
+      }
+
+      .job-title {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        flex-wrap: wrap;
+        margin-bottom: 0.25rem;
+      }
+
+      .job-title p {
+        font-size: 1rem;
+        margin: 0;
+      }
+
+      .job-title .date {
+        color: var(--light-text-color);
+        font-size: 0.9rem;
+        font-style: italic;
+        flex-shrink: 0;
+        margin-left: 1rem;
+      }
+
+      .experience ul {
+        margin: 0.5rem 0 0 0;
+        padding-left: 1.2rem;
+      }
+
+      .experience li {
+        margin-bottom: 0.4rem;
+      }
+
+      .summary p {
+        margin: 0;
+      }
+
+      .skills-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+      }
+
+      .skill-category {
+        padding: 0;
+        min-width: 250px;
+      }
+
+      .skill-category h4 {
+        margin: 0 0 0.5rem 0;
+        color: var(--text-color);
+        font-size: 1rem;
+      }
+
+      .skill-category ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        font-size: 0.95rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+      }
+
+      .skill-item {
+        background-color: #f0f0f0;
+        padding: 0.25rem 0.75rem;
+        border-radius: 0.25rem;
+        font-size: 0.9rem;
+        display: inline-flex;
+        align-items: center;
+      }
+
+      .skill-icon {
+        width: 1.2em;
+        height: 1.2em;
+        margin-right: 0.25em;
+        margin-bottom: -3px;
+      }
+
+      .education p {
+        margin: 0;
+      }
+
+      .hobbies-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+      }
+
+      .hobby {
+        background-color: #f0f0f0;
+        padding: 0.25rem 0.75rem;
+        border-radius: 0.25rem;
+        font-size: 0.9rem;
+      }
+
+      /* Two-column layout for main content */
+      main {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        /* Left column 1 part, Right column 2 parts */
+        gap: 1rem;
+        /* Space between columns */
+      }
+
+      /* Responsive adjustments for smaller screens */
+      @media (max-width: 768px) {
+        main {
+          grid-template-columns: 1fr;
+          /* Stack columns on smaller screens */
+          gap: 0;
+          /* Remove gap when stacked */
+        }
+
+        .resume-container {
+          padding: 1rem 1.5rem;
+          /* Adjust padding for smaller screens */
+        }
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="resume-container">
+      <header class="header">
+        <h1>Vikas Kukreti</h1>
+      </header>
+
+      <main>
+        <div id="left-column">
+          <section class="connect">
+            <h2>Connect</h2>
+            <ul class="connect-links">
+              <li>
+                <img class="icon" src="assets/images/gmail.svg" /><a
+                  href="mailto:vikaskukreti10@gmail.com"
+                  >vikaskukreti10@gmail.com</a
+                >
+              </li>
+              <li>
+                <i class="devicon-linkedin-plain colored"></i>
+                <a
+                  href="https://www.linkedin.com/in/vikas-kukreti"
+                  target="_blank"
+                  >linkedin.com/in/vikas-kukreti</a
+                >
+              </li>
+              <li>
+                <i class="devicon-github-plain colored"></i>
+                <a href="https://github.com/vikas-kukreti/" target="_blank"
+                  >github.com/vikas-kukreti/</a
+                >
+              </li>
+            </ul>
+          </section>
+          <section class="skills">
+            <h2>Skills</h2>
+            <div class="skills-grid">
+              <div class="skill-category">
+                <h4>Languages</h4>
+                <ul>
+                  <li class="skill-item">
+                    <i
+                      class="devicon-typescript-original colored skill-icon"
+                    ></i
+                    >TypeScript
+                  </li>
+                  <li class="skill-item">
+                    <i class="devicon-python-plain colored skill-icon"></i
+                    >Python
+                  </li>
+                  <li class="skill-item">
+                    <i class="devicon-kotlin-plain colored skill-icon"></i
+                    >Kotlin
+                  </li>
+                  <li class="skill-item">
+                    <i class="devicon-java-plain colored skill-icon"></i>Java
+                  </li>
+                  <li class="skill-item">
+                    <i class="devicon-go-plain colored skill-icon"></i>Go
+                    (Learning)
+                  </li>
+                </ul>
+              </div>
+              <div class="skill-category">
+                <h4>Backend</h4>
+                <ul>
+                  <li class="skill-item">
+                    <i class="devicon-nodejs-plain colored skill-icon"></i
+                    >Node.js
+                  </li>
+                  <li class="skill-item">
+                    <i class="devicon-postgresql-plain colored skill-icon"></i
+                    >PostgreSQL
+                  </li>
+                  <li class="skill-item">
+                    <i class="devicon-mongodb-plain colored skill-icon"></i
+                    >MongoDB
+                  </li>
+                  <li class="skill-item">
+                    <i class="devicon-redis-plain colored skill-icon"></i>Redis
+                  </li>
+                  <li class="skill-item">
+                    <i class="devicon-redis-plain colored skill-icon"></i>Redis
+                  </li>
+                </ul>
+              </div>
+              <div class="skill-category">
+                <h4>Frontend</h4>
+                <ul>
+                  <li class="skill-item">
+                    <i class="devicon-react-original colored skill-icon"></i
+                    >React
+                  </li>
+                  <li class="skill-item">
+                    <i class="devicon-react-original colored skill-icon"></i
+                    >React Native
+                  </li>
+                  <li class="skill-item">
+                    <i class="devicon-nextjs-original colored skill-icon"></i
+                    >Next.js
+                  </li>
+                  <li class="skill-item">
+                    <i class="devicon-html5-plain colored skill-icon"></i>HTML5
+                  </li>
+                  <li class="skill-item">
+                    <i class="devicon-css3-plain colored skill-icon"></i>CSS3
+                  </li>
+                </ul>
+              </div>
+              <div class="skill-category">
+                <h4>Infrastructure & Tools</h4>
+                <ul>
+                  <li class="skill-item">
+                    <i
+                      class="devicon-amazonwebservices-plain colored skill-icon"
+                    ></i
+                    >AWS
+                  </li>
+                  <li class="skill-item">
+                    <i class="devicon-git-plain colored skill-icon"></i>Git
+                  </li>
+                  <li class="skill-item">
+                    <i class="devicon-docker-plain colored skill-icon"></i
+                    >Docker
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <section class="hobbies">
+            <h2>Hobbies</h2>
+            <div class="hobbies-grid">
+              <span class="hobby">🏋️ Gym & Fitness</span>
+              <span class="hobby">🎤 Singing</span>
+              <span class="hobby">✈️ Traveling</span>
+              <span class="hobby">📚 Reading</span>
+            </div>
+          </section>
+        </div>
+        <div id="right-column">
+          <section class="summary">
+            <h2>About</h2>
+            <p>
+              Full-stack software engineer specializing in turning complex
+              problems into fast, scalable solutions for backend, mobile, and
+              web. Focused on building high-performance, user-centric
+              applications by translating requirements into efficient,
+              production-ready code.
+            </p>
+          </section>
+          <section class="experience">
+            <h2>Experience</h2>
+            <div class="job">
+              <div class="job-title">
+                <h3>Wishlink</h3>
+                <span class="date">Mar 2025 - Present</span>
+              </div>
+              <p><strong>Software Engineer</strong></p>
+              <ul>
+                <li>
+                  Led full-cycle feature development for a shopping app with
+                  100K DAU, boosting user retention.
+                </li>
+                <li>
+                  Cut startup latency by over 60% and reduced memory footprint
+                  by 50% through targeted performance optimizations.
+                </li>
+                <li>
+                  Revamped UI/UX for improved usability and scalability,
+                  implementing predictive preloading for video content.
+                </li>
+              </ul>
+            </div>
+            <div class="job">
+              <div class="job-title">
+                <h3>ByteLearn.com</h3>
+                <span class="date">Apr 2024 - Feb 2025</span>
+              </div>
+              <p><strong>Software Development Engineer II</strong></p>
+              <ul>
+                <li>
+                  Served as a technical lead for the frontend team, guiding
+                  contributions to core product verticals.
+                </li>
+                <li>
+                  Directed development of a web app, Chrome Extension, and
+                  associated data scraping services.
+                </li>
+              </ul>
+            </div>
+            <div class="job">
+              <div class="job-title">
+                <h3>ByteLearn.com</h3>
+                <span class="date">Jul 2022 - Apr 2024</span>
+              </div>
+              <p><strong>Software Development Engineer</strong></p>
+              <ul>
+                <li>
+                  Architected and designed a scalable B2B student platform for
+                  web and native mobile, enhancing user experience.
+                </li>
+                <li>
+                  Developed robust REST APIs and automated data processing
+                  scripts using Node.js and Python.
+                </li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="education">
+            <h2>Education</h2>
+            <p>
+              <strong>Bachelor of Technology, Computer Science</strong> (June
+              2022)
+            </p>
+            <p>Uttarakhand Technical University</p>
+          </section>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
