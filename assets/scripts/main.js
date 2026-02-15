@@ -21,10 +21,12 @@ let width, height;
 let particles = [];
 
 function resize() {
-  width = window.innerWidth * window.devicePixelRatio;
-  height = window.innerHeight * window.devicePixelRatio;
-  bgCanvas.width = width;
-  bgCanvas.height = height;
+  const dpi = window.devicePixelRatio * 2;
+  width = window.innerWidth;
+  height = window.innerHeight;
+  bgCanvas.width = width * dpi;
+  bgCanvas.height = height * dpi;
+  ctx.scale(dpi, dpi);
   initParticles();
 }
 
@@ -44,7 +46,7 @@ function initParticles() {
 }
 
 function drawParticles() {
-  const color = getPreferredTheme() === "light" ? "0,0,100" : "200,200,255";
+  const color = getPreferredTheme() === "light" ? "50,50,100" : "200,200,255";
   ctx.clearRect(0, 0, width, height);
 
   particles.forEach((p, i) => {
